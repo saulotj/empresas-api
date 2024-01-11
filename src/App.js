@@ -95,21 +95,27 @@ function App() {
 
   return (
     <div>
-      <InputGroup className="w-50">
+      <InputGroup className="w-25">
         <Form.Control
           placeholder="CNPJ ou Código do Cliente"
           aria-label="CNPJ"
           aria-describedby="CNPJ"
           value={inputCnpj}
           onChange={(e) => setInputCnpj(e.target.value.replace(/[^0-9]+/g, ""))}
+          onKeyDown={(e) => {
+            if(e.key === 'Enter') {
+              e.preventDefault();
+              handleSearch();
+            }
+          }}
         />
-        <Button variant="outline-secondary" id="button-addon2" onClick={handleSearch}>
+        <Button className="w-3" variant="outline-secondary" id="button-addon2" onClick={handleSearch}>
           Buscar
         </Button>
-        <Button variant="outline-secondary" onClick={() => setFilterType('recent')}>
+        <Button className="w-3" variant="outline-secondary" onClick={() => setFilterType('recent')}>
           Mais recente
         </Button>
-        <Button variant="outline-secondary" onClick={() => setFilterType('old')}>
+        <Button className="w-3"variant="outline-secondary" onClick={() => setFilterType('old')}>
           Mais antiga
         </Button>
       </InputGroup>
