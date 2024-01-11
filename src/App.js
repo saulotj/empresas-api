@@ -109,13 +109,13 @@ function App() {
             }
           }}
         />
-        <Button className="w-3" variant="outline-secondary" id="button-addon2" onClick={handleSearch}>
+        <Button variant="outline-secondary" id="button-addon2" onClick={handleSearch}>
           Buscar
         </Button>
-        <Button className="w-3" variant="outline-secondary" onClick={() => setFilterType('recent')}>
+        <Button variant="outline-secondary" onClick={() => setFilterType('recent')}>
           Mais recente
         </Button>
-        <Button className="w-3"variant="outline-secondary" onClick={() => setFilterType('old')}>
+        <Button variant="outline-secondary" onClick={() => setFilterType('old')}>
           Mais antiga
         </Button>
       </InputGroup>
