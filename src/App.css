@@ -38,20 +38,24 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+Table {
+	text-align: center;
 }
 
-td.green {
-	color: green;
-  }
-  
-  td.yellow {
-	color: yellow;
-  }
-  
-  td.red {
+th {
+	font-weight: bold;
+}
+
+.red {
 	color: red;
-  }
+}
+
+.green {
+	color: rgb(9, 201, 9);
+}
+
+.yellow{
+	color: yellow;
+}
   
