@@ -97,7 +97,7 @@ function App() {
     <div>
       <InputGroup className="w-50">
         <Form.Control
-          placeholder="CNPJ"
+          placeholder="CNPJ ou Código do Cliente"
           aria-label="CNPJ"
           aria-describedby="CNPJ"
           value={inputCnpj}
@@ -118,6 +118,7 @@ function App() {
           <thead>
             <tr>
               <th>Codigo empresa</th>
+              <th>CNPJ</th>
               <th>Razão Social</th>
               <th>Data Atualização</th>
               <th>Data Atual</th>
@@ -128,6 +129,7 @@ function App() {
             {data.map((item, index) => (
               <tr key={index}>
                 <td>{item.codemp? item.codemp : item.id_pd}</td>
+                <td>{item.cnpj}</td>
                 <td>{item.razao_social? item.razao_social : item.erro}</td>
                 <td>
                   {dateTime(item.data_atualiza) === "31 de dezembro de 1969"? 'Sem data processada' : dateTime(item.data_atualiza)}
